@@ -1,0 +1,56 @@
+/* Container styling */
+.container {
+    background-color: #0066b2;
+    margin: 0 25%;
+    padding: 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Heading styling */
+  .heading {
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 15px;
+  }
+  
+  /* Contact Wrapper styling */
+  .contactWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  /* Contact Item styling */
+  .contactItem {
+    flex-direction: column;
+    width: 20%;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Icon styling */
+  .icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .container {
+      margin: 0 10%;
+    }
+    .contactWrapper {
+      flex-direction: column;
+    }
+    .contactItem {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      margin: 0 5%;
+    }
+  }
+  
