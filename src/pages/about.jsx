@@ -7,7 +7,7 @@ const About = () => {
       <div style={styles.content}>
         {/* Image Section */}
         <div style={styles.imageContainer}>
-          <img src={RohanConstructiondddd} alt='RohanConstruction' style={styles.image} />
+          <img src={RohanConstructiondddd} alt='Rohan Construction' style={styles.image} />
         </div>
 
         {/* Text Section */}
@@ -51,23 +51,40 @@ const styles = {
   },
   content: {
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'row', // Horizontal layout for larger screens
+    justifyContent: 'space-between',
+    alignItems: 'center',
     marginLeft: '3%',
     marginRight: '3%',
+    flexWrap: 'wrap', // Allows wrapping on smaller screens
   },
   imageContainer: {
-    width: '100%',
+    flex: '1 1 45%', // Flex-grow, flex-shrink, and flex-basis
     textAlign: 'center',
-    marginBottom: '20px',
+    marginBottom: '5px',
   },
   image: {
-    width: '50%',
+    width: '100%',
     height: 'auto',
+    maxWidth: '400px', // Maximum width of the image
   },
   textContainer: {
-    width: '100%',
-    paddingLeft: '10%',
-    paddingRight: '10%',
+    flex: '1 1 45%',
+    paddingLeft: '20px',
+    paddingRight: '20px',
+  },
+  '@media (max-width: 768px)': { // Media query for smaller screens
+    content: {
+      flexDirection: 'column', // Stack columns on smaller screens
+      alignItems: 'center',
+    },
+    imageContainer: {
+      marginBottom: '10px',
+    },
+    textContainer: {
+      paddingLeft: '0',
+      paddingRight: '0',
+    },
   },
 };
 
